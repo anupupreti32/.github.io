@@ -216,11 +216,19 @@
             background-color: #fef7f1 !important;
         }
         .navpadding {
-           margin-left: 50%;
+            padding-left:70%;
         }
         @media only screen and (max-width: 670px){
             .navpadding{
-                margin-left:0px;
+                padding-left:0px;
+            }
+        }
+        .listpadding{
+            padding-left: 10%;
+        }
+        @media only screen and (max-width: 670;){
+            .listpadding{
+                padding-left: 0px;
             }
         }
     </style>
@@ -230,29 +238,27 @@
 <body class="bgcolor bgcolordark">
     <div class="bgcolor">
         <header >
-            <nav class="navfont navigation navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 navbg">
+            <nav class="navfont navigation navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 navbg" style="list-style:none;">
                 <div class="container">
                     <a class="navbar-brand" href="#introduction" style="font-size: 30px !important;font-family: 'Shadows Into Light Two', cursive">Anup Upreti</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"  >
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" x>
+                        <ul class="navbar-nav flex-grow-1 navpadding">
+                            <li class="nav-item" >
                                 <a class="nav-link text-dark" href="#work">Work</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item listpadding">
                                 <a class="nav-link text-dark" href="#education">Qualifications</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item listpadding">
                                 <a class="nav-link text-dark" href="#socials">Socials</a>
                             </li>
-                            <li class="nav-item">
-                                
+                            <li class="nav-item listpadding" style="padding-top: 15px;">   
                                 <a>
-
-                                    <input type="checkbox" class="checkbox" id="checkbox">
+                               <input type="checkbox" class="checkbox" id="checkbox"> 
                                     <label for="checkbox" class="label">
                                         <img src="wwwroot/img/sun.jpg" height="20px"></img>
                                         <img src="wwwroot/img/moon.png"height="18px"></img>
@@ -314,7 +320,7 @@
             </div>
         </div>
     <br />
-    <footer style=" left: 0; bottom: 0; width: 100%;" id="socials">
+    <footer style=" left: 0; bottom: 0; width: 100%;" id="socials" >
         <div class="row">                      
             <div class="col-md-12">
                 <div style="font-family: 'Courier Prime', monospace; background-color:#696969; height: 50px; text-align: center; padding-top: 5px; color: white;">
