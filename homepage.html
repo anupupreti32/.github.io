@@ -16,6 +16,7 @@
             transition: background 0.5s linear;
             overflow-x: hidden;
             overflow-y: hidden;
+            
         }
 
         .bgcolor {
@@ -173,13 +174,18 @@
 
         .resume {
             list-style: none;
-            margin-left: 30px;
+            margin-left: 20px;
             padding-left: 50px;
             border-left: 2px solid #40424a;
         }
 
         .orgname {
             font-size: 40px;
+        }
+        @media only screen and (max-width: 670px;){
+            .orgname{
+                font-size: 25px;
+            }
         }
 
         a:link {
@@ -224,7 +230,7 @@
             }
         }
         .listpadding{
-            padding-left: 10%;
+            padding-left: 5%;
         }
         @media only screen and (max-width: 670px){
             .listpadding{
@@ -232,9 +238,15 @@
             }
         }
         .wrap{
-           padding-left: 3%;
-           padding-right: 3%;
+           padding-left: 10%;
+           padding-right: 10%;
             
+        }
+        @media only screen and(max-width: 670px){
+            .wrap{
+                padding-left: 3%;
+                padding-right: 3%;
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
@@ -261,7 +273,7 @@
                             <li class="nav-item listpadding">
                                 <a class="nav-link text-dark" href="#socials">Socials</a>
                             </li>
-                            <li class="nav-item listpadding" style="padding-top: 13px;">   
+                            <li class="nav-item listpadding" style="padding-top: 10px;">   
                                 <a >
                                <input type="checkbox" class="checkbox" id="checkbox" > 
                                     <label for="checkbox" class="label"style="cursor: pointer;">
@@ -270,6 +282,10 @@
                                         <div class="ball"></div>
                                     </label>
                                 </a>
+                            </li>  
+                                                    
+                            <li class="listpadding" style="padding-top: 7px;">                       
+                            <nobr><a><img src="wwwroot/img/clock.png" height="30" width="30"/><b><span id="time"></span></a></b> </nobr>
                             </li>
                         </ul>
                     </div>
@@ -285,40 +301,46 @@
                             <!--header-->
                             <h1>Introduction</h1><hr class="solid"><br />
                             <img class="anupimage" src="wwwroot/img/anupimage.jpg"><br /> <br /> <div class="wrap">
-                            <p style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <span style="text-align: justify;">Hello, I am Anup Upreti. I am a front end web developer. Hopefully, I will be a full stack developer somewhere near future. I am currently working as a web- developement intern here in Kathmandu Codes. I definitely do love the idea of coding; meanwhile, I also love to play online multiplayer games with my friends. 
+                                If(InterestedInPlaying == True) <br>
+                                { <br>
+                                    DiscordId = "Noorseshield#4526";<br>
+                                }</span>
                         </div>
                         </div>
                         <div class="abovequalification" id="work">
                             <!--qualification-->
-                            <h1>Work</h1><hr class="solid"><br />
+                            <h1>Work</h1><hr class="solid"><br />                 
                             <ul class="resume" style="text-align:left;">
-                                <li>
+                                <li >
                                     <h2>2019-Present</h2>
                                     <a href="https://kathmandu.codes/" style="cursor: pointer; color: #111;" target="_blank">
                                         <span class="orgname">Kathmandu Codes</span>
                                     </a>
                                     <h4>Web Development Intern</h4>
-                                    <span style="text-align: justify;" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+                                    <span style="text-align: justify;">My first ever professional job as a developer. I loved every bit of it, my stepping stone into the world of developement.  </span>
                                 </li>
                             </ul>
+                        </div>
                         </div><br />
                         <div class="abovequalification" id="education">
                             <!--qualification-->
                             <h1>Education</h1><hr class="solid"><br />
                             <ul class="resume" style="text-align:left;">
-                                <li>
+                                <li >
                                     <h2>2019</h2>
                                     <h3 class="orgname">LITTLE ANGLES' HSS</h3>
                                     <h4>High School</h4>
-                                    <span style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span>
+                                    <span style="text-align: justify;">GCE A-Levels. </span>
                                 </li>
                             </ul><br />
+                        </div>
                             <ul class="resume" style="text-align:left;">
-                                <li>
+                                <li >
                                     <h2>2017</h2>
                                     <h3 class="orgname">SOLIDARITY INTERNATIONAL ACADEMY</h3>
                                     <h4>Middle School</h4>
-                                    <span style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span>
+                                    <span style="text-align: justify;">Completed Secondary Education Examination. </span>
                                 </li>
                             </ul>
                         </div>
@@ -360,6 +382,22 @@
         checkbox.addEventListener('change', () => {
             document.body.classList.toggle('dark');
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            clock();
+        })
+        function clock(){
+            var d = new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+                if (m.toString().length == 1){
+                 m = "0"+ m;
+                }
+            var present = h +":" + m;
+            document.getElementById("time").innerHTML = present;
+            setInterval(clock, 500);
+        }
     </script>
 </body>
 </html>
